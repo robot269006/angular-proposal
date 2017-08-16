@@ -4,6 +4,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DocumentsComponent } from './documents/documents.component';
+import { ProposalListComponent } from './proposal/proposal-list.component';
 
 @NgModule ({
   imports: [
@@ -13,7 +14,8 @@ import { DocumentsComponent } from './documents/documents.component';
   declarations: [
     AppComponent,
     HomepageComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    ProposalListComponent
   ],
   bootstrap: [
     AppComponent
