@@ -6,11 +6,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// Base module -> This is like module of modules
 var core_1 = require("@angular/core");
+// Applied module -> imported modules and are used directly
 var platform_browser_1 = require("@angular/platform-browser");
+var app_routing_module_1 = require("./app-routing.module");
+var forms_1 = require("@angular/forms");
+// Custom module -> Component module is imported and are modified to fit each's use
 var homepage_component_1 = require("./homepage/homepage.component");
 var app_component_1 = require("./app.component");
-var app_routing_module_1 = require("./app-routing.module");
 var documents_component_1 = require("./documents/documents.component");
 var proposal_list_component_1 = require("./proposal/proposal-list.component");
 var proposal_new_component_1 = require("./proposal/proposal-new.component");
@@ -23,7 +27,8 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [
             platform_browser_1.BrowserModule,
-            app_routing_module_1.AppRoutingModule
+            app_routing_module_1.AppRoutingModule,
+            forms_1.FormsModule
         ],
         declarations: [
             app_component_1.AppComponent,
