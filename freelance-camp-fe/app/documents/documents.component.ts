@@ -8,6 +8,8 @@ import { Document } from './document';
 })
 
 export class DocumentsComponent {
+  // attributes that are available in this component, are defined as xxxx:
+  pageTitle: string = "Documents Dashboard"
   documents: Document[] = [
     {
       title: "My first Doc",

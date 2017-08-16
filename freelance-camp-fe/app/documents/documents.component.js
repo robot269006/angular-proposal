@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var DocumentsComponent = (function () {
     function DocumentsComponent() {
+        // attributes that are available in this component, are defined as xxxx:
+        this.pageTitle = "Documents Dashboard";
         this.documents = [
             {
                 title: "My first Doc",
