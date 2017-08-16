@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Proposal = (function () {
-    function Proposal(id, customer, portofolio_url, tools, estimated_hours, hourly_rate, weeks_to_complete, client_email) {
-        if (portofolio_url === void 0) { portofolio_url = 'http://'; }
+    function Proposal(id, customer, portfolio_url, tools, estimated_hours, hourly_rate, weeks_to_complete, client_email) {
+        if (portfolio_url === void 0) { portfolio_url = 'http://'; }
         this.id = id;
         this.customer = customer;
-        this.portofolio_url = portofolio_url;
+        this.portfolio_url = portfolio_url;
         this.tools = tools;
         this.estimated_hours = estimated_hours;
         this.hourly_rate = hourly_rate;
