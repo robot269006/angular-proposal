@@ -8,8 +8,8 @@ import { Proposal } from './proposal';
 })
 
 export class ProposalListComponent {
-  proposalOne: Proposal = new Proposal(8, 'ABC Company', 'http://ABCCompany.com', 'Ruby on Rails', 150, 120, 15, 'abc@gmail.com'),
-  proposalTwo: Proposal = new Proposal(22, 'EDF Company', 'http://ABCCompany.com', 'Ruby on Rails', 150, 120, 15, 'abc@gmail.com'),
+  proposalOne: Proposal = new Proposal(8, 'ABC Company', 'http://ABCCompany.com', 'Ruby on Rails', 150, 120, 15, 'abc@gmail.com');
+  proposalTwo: Proposal = new Proposal(22, 'EDF Company', 'http://ABCCompany.com', 'Ruby on Rails', 150, 120, 15, 'abc@gmail.com');
   proposalThree: Proposal = new Proposal(35, 'XYZ Company', 'http://ABCCompany.com', 'Ruby on Rails', 150, 120, 15, 'abc@gmail.com')
 
   proposals: Proposal[] = [
