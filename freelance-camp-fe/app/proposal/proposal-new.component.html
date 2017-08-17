@@ -11,6 +11,7 @@
                    placeholder="ABC Company"
                    required
                    name="customer"
+                   class="form-control"
                    #customer='ngModel'
                    [(ngModel)]="proposal.customer"
             >
@@ -27,6 +28,7 @@
                    id="potfolio_url"
                    required
                    name="potfolio_url"
+                   class="form-control"
                    #portfolio_url='ngModel'
                    [(ngModel)]="proposal.portfolio_url"
             >
@@ -44,6 +46,7 @@
                    placeholder="Ruby on Rails, Angular, etc"
                    required
                    name="tools"
+                   class="form-control"
                    #tools='ngModel'
                    [(ngModel)]="proposal.tools"
             >
@@ -61,6 +64,7 @@
                    id="estimated_hours"
                    required
                    name="estimated_hours"
+                   class="form-control"
                    #estimated_hours='ngModel'
                    [(ngModel)]="proposal.estimated_hours"
             >
@@ -73,13 +77,17 @@
 
           <div class="form-group">
             <label for="hourly_rate">Hourly Rate</label>
-            <input type="number"
-                   id="hourly_rate"
-                   required
-                   name="hourly_rate"
-                   #hourly_rate='ngModel'
-                   [(ngModel)]="proposal.hourly_rate"
-            >
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="number"
+                     id="hourly_rate"
+                     required
+                     name="hourly_rate"
+                     class="form-control"
+                     #hourly_rate='ngModel'
+                     [(ngModel)]="proposal.hourly_rate"
+              >
+            </div>
             <div [hidden]="hourly_rate.valid || hourly_rate.pristine"
             class="alert alert-danger"
             >
@@ -93,6 +101,7 @@
                    id="weeks_to_complete"
                    required
                    name="weeks_to_complete"
+                   class="form-control"
                    #weeks_to_complete='ngModel'
                    [(ngModel)]="proposal.weeks_to_complete"
             >
@@ -108,6 +117,7 @@
             <input type="email"
                    id="client_email"
                    name="client_email"
+                   class="form-control"
                    #client_email='ngModel'
                    [(ngModel)]="proposal.client_email"
             >
