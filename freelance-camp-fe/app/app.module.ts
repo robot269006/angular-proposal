@@ -6,6 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 
+// Added module -> installed ng-bootstrap then imported the bootstrap module
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 // Custom module -> Component module is imported and are modified to fit each's use
 import { HomepageComponent } from './homepage/homepage.component';
 import { AppComponent } from './app.component';
@@ -18,7 +21,8 @@ import { ProposalShowComponent } from './proposal/proposal-show.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
   declarations: [
     AppComponent,

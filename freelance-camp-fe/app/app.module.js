@@ -12,6 +12,8 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_routing_module_1 = require("./app-routing.module");
 var forms_1 = require("@angular/forms");
+// Added module -> installed ng-bootstrap then imported the bootstrap module
+var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 // Custom module -> Component module is imported and are modified to fit each's use
 var homepage_component_1 = require("./homepage/homepage.component");
 var app_component_1 = require("./app.component");
@@ -29,7 +31,8 @@ AppModule = __decorate([
         imports: [
             platform_browser_1.BrowserModule,
             app_routing_module_1.AppRoutingModule,
-            forms_1.FormsModule
+            forms_1.FormsModule,
+            ng_bootstrap_1.NgbModule.forRoot()
         ],
         declarations: [
             app_component_1.AppComponent,
