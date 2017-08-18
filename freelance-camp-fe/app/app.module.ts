@@ -19,6 +19,7 @@ import { ProposalShowComponent } from './proposal/proposal-show.component';
 
 // Injection module -> Treated like custom module, but for dependency injection purposes
 import { DocumentService } from './documents/document.service';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule ({
@@ -26,7 +27,8 @@ import { DocumentService } from './documents/document.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpModule
   ],
   declarations: [
     AppComponent,

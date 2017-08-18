@@ -23,6 +23,7 @@ var proposal_new_component_1 = require("./proposal/proposal-new.component");
 var proposal_show_component_1 = require("./proposal/proposal-show.component");
 // Injection module -> Treated like custom module, but for dependency injection purposes
 var document_service_1 = require("./documents/document.service");
+var http_1 = require("@angular/http");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +35,8 @@ AppModule = __decorate([
             platform_browser_1.BrowserModule,
             app_routing_module_1.AppRoutingModule,
             forms_1.FormsModule,
-            ng_bootstrap_1.NgbModule.forRoot()
+            ng_bootstrap_1.NgbModule.forRoot(),
+            http_1.HttpModule
         ],
         declarations: [
             app_component_1.AppComponent,
