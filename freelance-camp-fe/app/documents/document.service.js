@@ -7,20 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var proposal_1 = require("./proposal");
-var ProposalNewComponent = (function () {
-    function ProposalNewComponent() {
-        this.proposal = new proposal_1.Proposal;
+var DocumentService = (function () {
+    function DocumentService() {
     }
-    return ProposalNewComponent;
+    return DocumentService;
 }());
-ProposalNewComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'proposal-new',
-        templateUrl: 'proposal-new.component.html',
-        styleUrls: ['proposal-new.component.css']
-    })
-], ProposalNewComponent);
-exports.ProposalNewComponent = ProposalNewComponent;
-//# sourceMappingURL=proposal-new.component.js.map
+DocumentService = __decorate([
+    core_1.Injectable()
+], DocumentService);
+exports.DocumentService = DocumentService;
+//# sourceMappingURL=document.service.js.map

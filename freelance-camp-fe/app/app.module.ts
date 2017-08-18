@@ -17,6 +17,10 @@ import { ProposalListComponent } from './proposal/proposal-list.component';
 import { ProposalNewComponent } from './proposal/proposal-new.component';
 import { ProposalShowComponent } from './proposal/proposal-show.component';
 
+// Injection module -> Treated like custom module, but for dependency injection purposes
+import { DocumentService } from './documents/document.service';
+
+
 @NgModule ({
   imports: [
     BrowserModule,
@@ -31,6 +35,9 @@ import { ProposalShowComponent } from './proposal/proposal-show.component';
     ProposalListComponent,
     ProposalNewComponent,
     ProposalShowComponent
+  ],
+  providers: [
+    DocumentService
   ],
   bootstrap: [
     AppComponent

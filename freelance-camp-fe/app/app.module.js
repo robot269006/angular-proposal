@@ -21,6 +21,8 @@ var documents_component_1 = require("./documents/documents.component");
 var proposal_list_component_1 = require("./proposal/proposal-list.component");
 var proposal_new_component_1 = require("./proposal/proposal-new.component");
 var proposal_show_component_1 = require("./proposal/proposal-show.component");
+// Injection module -> Treated like custom module, but for dependency injection purposes
+var document_service_1 = require("./documents/document.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -41,6 +43,9 @@ AppModule = __decorate([
             proposal_list_component_1.ProposalListComponent,
             proposal_new_component_1.ProposalNewComponent,
             proposal_show_component_1.ProposalShowComponent
+        ],
+        providers: [
+            document_service_1.DocumentService
         ],
         bootstrap: [
             app_component_1.AppComponent

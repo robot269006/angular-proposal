@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Proposal } from './proposal';
 
-@Component ({
+@Component({
   moduleId: module.id,
   selector: 'proposal-new',
   templateUrl: 'proposal-new.component.html',
-  stylesUrl: ['propsal-new.component.css']
+  styleUrls: ['proposal-new.component.css']
 })
 
 export class ProposalNewComponent {
