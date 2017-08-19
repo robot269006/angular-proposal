@@ -27,8 +27,16 @@ var ProposalService = (function () {
             .map(function (response) { return response.json(); }) //map a response to a response that we can actually work with
             .catch(this.handleError);
     };
+    // getting individual proposal -> show page
     ProposalService.prototype.getProposal = function (id) {
         return this.http.get(this.proposalsUrl + "/" + id + ".json");
+    };
+    // creating a new proposal -> create action on rails api
+    ProposalService.prototype.createProposal = function (proposal) {
+        var headers = new http_1.Headers({ 'Content-type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post(this.proposalsUrl, JSON.stringify(proposal), { headers: headers })
+            .map(function (res) { return res.json(); });
     };
     ProposalService.prototype.handleError = function (error) {
         // In a real world app, we might use a remote logging infrastructure

@@ -18,8 +18,16 @@ export class ProposalService {
                     .map((response: Response) => <Proposal[]>response.json()) //map a response to a response that we can actually work with
                     .catch(this.handleError);
   }
+  // getting individual proposal -> show page
   getProposal(id: number) {
     return this.http.get(this.proposalsUrl + "/" + id + ".json")
+  }
+  // creating a new proposal -> create action on rails api
+  createProposal(proposal) {
+    let headers = new Headers({ 'Content-type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.proposalsUrl, JSON.stringify(proposal), {headers: headers})
+    .map((res: Response) => res.json());
   }
 
   private handleError (error: Response | any) {
