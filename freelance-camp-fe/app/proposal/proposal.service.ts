@@ -6,7 +6,7 @@ import { Proposal } from './proposal';
 @Injectable()
 export class ProposalService {
   //api url
-  private proposalsUrl = 'http://localhost:3002/proposals.json';
+  private proposalsUrl = 'http://localhost:3002/proposals';
   //constructor is going to create connection with HTTP, since this api connection will be dependent on HTTP call
   constructor(
     //private varible created, and the type is defined as "Http" -> Http library is called
@@ -17,6 +17,9 @@ export class ProposalService {
     return this.http.get(this.proposalsUrl)
                     .map((response: Response) => <Proposal[]>response.json()) //map a response to a response that we can actually work with
                     .catch(this.handleError);
+  }
+  getProposal(id: number) {
+    return this.http.get(this.proposalsUrl + "/" + id + ".json")
   }
 
   private handleError (error: Response | any) {

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Rx';
   selector: 'documents',
   templateUrl: 'documents.component.html',
   styleUrls: ['documents.component.css'],
-  providers: [DocumentService],
+  providers: [DocumentService]
 })
 
 export class DocumentsComponent implements OnInit {

@@ -19,13 +19,16 @@ var ProposalService = (function () {
         http) {
         this.http = http;
         //api url
-        this.proposalsUrl = 'http://localhost:3002/proposals.json';
+        this.proposalsUrl = 'http://localhost:3002/proposals';
     }
     //return an observable. Observable takes a type argument -> angled brackets. We want this observalbe to retun an array of documents
     ProposalService.prototype.getProposals = function () {
         return this.http.get(this.proposalsUrl)
             .map(function (response) { return response.json(); }) //map a response to a response that we can actually work with
             .catch(this.handleError);
+    };
+    ProposalService.prototype.getProposal = function (id) {
+        return this.http.get(this.proposalsUrl + "/" + id + ".json");
     };
     ProposalService.prototype.handleError = function (error) {
         // In a real world app, we might use a remote logging infrastructure
